@@ -31,3 +31,9 @@
         width: 100%;
     }
 }
+
+.setting_select{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

@@ -5,9 +5,14 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Home from './pages/Home/Home'
 import Result from './pages/Result/Result'
-import Quiz from './pages/Quize/Quiz'
+import Quiz from './pages/Quiz/Quiz'
+import { useState } from 'react'
 
 function App() {
+  const [name, setName] = useState("")
+  const fetchQuestions = () =>{
+
+  }
 
   return (
     <>
@@ -15,7 +20,7 @@ function App() {
       <div className='app' style={{backgroundImage:"url(./ques1.png)"}}>
         <Header/>
         <Routes>
-          <Route path='/' element={<Home/>}/>
+          <Route path='/' element={<Home name={name} setName={setName} fetchQuestions={fetchQuestions}/>}/>
           <Route path='/quiz' element={<Quiz/>}/>
           <Route path='/result' element={<Result/>}/>
         </Routes>
